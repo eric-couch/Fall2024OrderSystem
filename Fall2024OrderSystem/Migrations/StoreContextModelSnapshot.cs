@@ -47,6 +47,16 @@ namespace Fall2024OrderSystem.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Customers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Addess = "201 Shaffner St.",
+                            FirstName = "Eric",
+                            LastName = "Couch",
+                            Phone = "(817) 304-9048"
+                        });
                 });
 
             modelBuilder.Entity("Fall2024OrderSystem.Models.Order", b =>
@@ -118,6 +128,20 @@ namespace Fall2024OrderSystem.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Meat Lover's Pizza",
+                            Price = 9.99m
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Deluxe Pizza",
+                            Price = 12.99m
+                        });
                 });
 
             modelBuilder.Entity("Fall2024OrderSystem.Models.Order", b =>
